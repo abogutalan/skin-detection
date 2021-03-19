@@ -8,11 +8,11 @@ import matplotlib.pyplot as plt
 import os
 import sys
 
-if(len(sys.argv) != 2):
-     print("ERROR: The format should be <<< python HSV_color_space.py <image file> >>>")
-     exit()
+# if(len(sys.argv) != 2):
+#      print("ERROR: The format should be <<< python HSV_color_space.py <image file> >>>")
+#      exit()
 
-filename = sys.argv[1]
+filename = 'skin11.jpg'
 
 min_HSV = np.array([0, 58, 30], dtype = "uint8")
 max_HSV = np.array([33, 255, 255], dtype = "uint8")

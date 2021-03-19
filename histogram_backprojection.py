@@ -5,11 +5,11 @@ import numpy as np
 import os
 import sys
 
-if(len(sys.argv) != 2):
-     print("ERROR: The format should be <<< python histogram_backprojection.py <image file> >>>")
-     exit()
+# if(len(sys.argv) != 2):
+#      print("ERROR: The format should be <<< python histogram_backprojection.py <image file> >>>")
+#      exit()
 
-filename = sys.argv[1]
+filename = 'skin12.jpg'
 
 def convolve(B, r):
     D = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(r,r))

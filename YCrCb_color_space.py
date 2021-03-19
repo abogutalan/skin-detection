@@ -8,11 +8,11 @@ import matplotlib.pyplot as plt
 import os
 import sys
 
-if(len(sys.argv) != 2):
-     print("ERROR: The format should be <<< python YCrCb_color_space.py <image file> >>>")
-     exit()
+# if(len(sys.argv) != 2):
+#      print("ERROR: The format should be <<< python YCrCb_color_space.py <image file> >>>")
+#      exit()
 
-filename = sys.argv[1]
+filename = 'skin12.jpg'
 
 min_YCrCb = np.array([0,133,77],np.uint8)
 max_YCrCb = np.array([235,173,127],np.uint8)

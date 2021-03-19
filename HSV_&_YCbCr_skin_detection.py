@@ -5,11 +5,11 @@ import numpy as np
 import os
 import sys
 
-if(len(sys.argv) != 2):
-     print("ERROR: The format should be <<< python HSV_&_YCbCr_skin_detection.py <image file> >>>")
-     exit()
+# if(len(sys.argv) != 2):
+#      print("ERROR: The format should be <<< python HSV_&_YCbCr_skin_detection.py <image file> >>>")
+#      exit()
 
-filename = sys.argv[1]
+filename = 'skin12.jpg'
 
 # read the image
 img = cv2.imread('skin_Images/' + filename)

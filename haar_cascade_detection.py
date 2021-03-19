@@ -5,11 +5,11 @@ import cv2
 import os
 import sys
 
-if(len(sys.argv) != 2):
-     print("ERROR: The format should be <<< python haar_cascade_detection.py script <image file> >>>")
-     exit()
+# if(len(sys.argv) != 2):
+#      print("ERROR: The format should be <<< python haar_cascade_detection.py script <image file> >>>")
+#      exit()
 
-filename = sys.argv[1]
+filename = 'skin12.jpg'
 
 # load the required XML classifiers
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
