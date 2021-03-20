@@ -9,7 +9,7 @@ import sys
 #      print("ERROR: The format should be <<< python histogram_backprojection.py <image file> >>>")
 #      exit()
 
-filename = 'skin12.jpg'
+filename = 'skin1.jpg'
 
 def convolve(B, r):
     D = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(r,r))
