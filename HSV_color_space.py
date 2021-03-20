@@ -7,12 +7,13 @@ import matplotlib.pyplot as plt
 
 import os
 import sys
+from colorama import init, Fore
 
-# if(len(sys.argv) != 2):
-#      print("ERROR: The format should be <<< python HSV_color_space.py <image file> >>>")
-#      exit()
+if(len(sys.argv) != 2):
+     print("ERROR: The format should be <<< python HSV_color_space.py <image file> >>>")
+     exit()
 
-filename = 'skin11.jpg'
+filename = sys.argv[1]
 
 min_HSV = np.array([0, 58, 30], dtype = "uint8")
 max_HSV = np.array([33, 255, 255], dtype = "uint8")
@@ -31,4 +32,4 @@ if not os.path.exists(result_path):
 
 cv2.imwrite(result_path+"/hsv_"+filename, np.hstack([image, skinHSV]))
 
-print("Images are saved to result_Images/HSV_color_space.")
+print(Fore.BLUE + "The " + filename + Fore.GREEN + " image is saved to" + Fore.CYAN + " result_Images/HSV_color_space." + Fore.LIGHTWHITE_EX)

@@ -4,12 +4,13 @@ import cv2
 
 import os
 import sys
+from colorama import init, Fore
 
-# if(len(sys.argv) != 2):
-#      print("ERROR: The format should be <<< python haar_cascade_detection.py script <image file> >>>")
-#      exit()
+if(len(sys.argv) != 2):
+     print("ERROR: The format should be <<< python haar_cascade_detection.py script <image file> >>>")
+     exit()
 
-filename = 'skin12.jpg'
+filename = sys.argv[1]
 
 # load the required XML classifiers
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -39,10 +40,10 @@ result_path = os.getcwd() + "/result_Images/haar_cascade"
 if not os.path.exists(result_path):
     os.makedirs(result_path)
 
-cv2.imwrite(os.path.join(result_path , filename), img)
+cv2.imwrite(os.path.join(result_path , "haarcascade_" + filename), img)
 
-print("The image is saved to result_Images/haar_cascade folder.")
+print(Fore.BLUE + "The " + filename + Fore.GREEN + " image is saved to" + Fore.CYAN + " result_Images/haar_cascade." + Fore.LIGHTWHITE_EX)
 
-cv2.imshow(filename,img)
-cv2.waitKey(0)
+# cv2.imshow(filename,img)
+# cv2.waitKey(0)
 cv2.destroyAllWindows()

@@ -4,12 +4,13 @@ import numpy as np
 
 import os
 import sys
+from colorama import init, Fore
 
-# if(len(sys.argv) != 2):
-#      print("ERROR: The format should be <<< python HSV_&_YCbCr_skin_detection.py <image file> >>>")
-#      exit()
+if(len(sys.argv) != 2):
+     print("ERROR: The format should be <<< python HSV_&_YCbCr_skin_detection.py <image file> >>>")
+     exit()
 
-filename = 'skin12.jpg'
+filename = sys.argv[1]
 
 # read the image
 img = cv2.imread('skin_Images/' + filename)
@@ -42,11 +43,11 @@ result_path = os.getcwd() + "/result_Images/HSV_&_YCbCr"
 if not os.path.exists(result_path):
     os.makedirs(result_path)
 
-cv2.imwrite(os.path.join(result_path , filename + "_HSV.jpg"), HSV_result)
-cv2.imwrite(os.path.join(result_path , filename + "_YCbCr.jpg"), YCrCb_result)
-cv2.imwrite(os.path.join(result_path , filename + "_global_result.jpg"), global_result)
+cv2.imwrite(os.path.join(result_path , "HSV_" + filename), HSV_result)
+cv2.imwrite(os.path.join(result_path , "YCbCr_" + filename), YCrCb_result)
+cv2.imwrite(os.path.join(result_path , "global_result_" + filename), global_result)
 
-print("The image is saved to result_Images/HSV_&_YCbCr folder.")
+print(Fore.BLUE + "The " + filename + Fore.GREEN + " image is saved to" + Fore.CYAN + " result_Images/HSV_&_YCbCr." + Fore.LIGHTWHITE_EX)
 
 
 #show results

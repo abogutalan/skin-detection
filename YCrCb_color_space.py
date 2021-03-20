@@ -7,12 +7,13 @@ import matplotlib.pyplot as plt
 
 import os
 import sys
+from colorama import init, Fore
 
-# if(len(sys.argv) != 2):
-#      print("ERROR: The format should be <<< python YCrCb_color_space.py <image file> >>>")
-#      exit()
+if(len(sys.argv) != 2):
+     print("ERROR: The format should be <<< python YCrCb_color_space.py <image file> >>>")
+     exit()
 
-filename = 'skin12.jpg'
+filename = sys.argv[1]
 
 min_YCrCb = np.array([0,133,77],np.uint8)
 max_YCrCb = np.array([235,173,127],np.uint8)
@@ -32,4 +33,4 @@ if not os.path.exists(result_path):
 
 cv2.imwrite(result_path+"/ycrcb_"+filename, np.hstack([image,skinYCrCb]))
 
-print("Images are saved to result_Images/HSV_color_space.")
+print(Fore.BLUE + "The " + filename + Fore.GREEN + " image is saved to" + Fore.CYAN + " result_Images/YCrCb_color_space." + Fore.LIGHTWHITE_EX)

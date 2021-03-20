@@ -1,4 +1,6 @@
 # How to run the program:
+chmod 755 run.sh
+./run.sh
 
 ### General example 
 > python YCrCb_color_space.py skin2.png
