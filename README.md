@@ -1,4 +1,6 @@
-https://github.com/abogutalan/skin-detection/blob/master/skin_detection_report.pdf
+
+
+https://docs.google.com/viewer?url=https://github.com/abogutalan/skin-detection/blob/master/skin_detection_report.pdf
 
 <embed src="/abogutalan/skin-detection/blob/master/skin_detection_report.pdf" type="application/pdf">
 
