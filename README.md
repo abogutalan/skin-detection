@@ -2,6 +2,8 @@
 
 https://docs.google.com/viewer?url=https://drive.google.com/file/d/1xZKH71BT3xPkJOOwqDGtMHVjMapkCfPO/view?usp=sharing
 
+https://drive.google.com/file/d/1xZKH71BT3xPkJOOwqDGtMHVjMapkCfPO/view?usp=sharing
+
 <embed src="/abogutalan/skin-detection/blob/master/skin_detection_report.pdf" type="application/pdf">
 
 # How to run the program:
