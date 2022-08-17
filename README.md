@@ -1,5 +1,7 @@
 https://github.com/abogutalan/skin-detection/blob/master/skin_detection_report.pdf
 
+<embed src="/skin-detection/blob/master/skin_detection_report.pdf" type="application/pdf">
+
 # How to run the program:
 chmod 755 run.sh
 ./run.sh
